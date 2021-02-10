@@ -11,7 +11,7 @@ Form.addEventListener('submit' , (e) => {
     const location = search.value
     mssg1.textContent = 'Loading...'
     mssg2.textContent = ''
-    const urL = 'http://localhost:3000/weather?address=' + location
+    const urL = '/weather?address=' + location
 
     fetch(urL).then((response) => {
     response.json().then((data) => {

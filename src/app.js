@@ -6,6 +6,8 @@ const hbs = require('hbs')
 const location = require('./utils/types')
 const app = express()
 
+const port = process.env.PORT || 3000
+
 // define paths for express configuration
 const publicpath = path.join(__dirname , '../public')
 const viewsPath = path.join(__dirname , '../templates/views')
@@ -85,7 +87,7 @@ app.get('*' , (req , res) => {
 // app.com/help
 // app.com/about
 
-app.listen(3000 , () => {
-    console.log('serving running on port 3000')
+app.listen(port , () => {
+    console.log('serving running on port ' + port)
 })
 
