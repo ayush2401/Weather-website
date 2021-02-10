@@ -32,7 +32,7 @@ const getForecast = (latitude , longitude , callback) => {
               callback('invalid input' , 'empty')
             } else {
               const data = body.current
-              const str = data.weather_descriptions[0] + '. It is ' + data.temperature + ' degrees outside and it feels like ' + data.feelslike + ' degrees'
+              const str = data.weather_descriptions[0] + '. It is ' + data.temperature + ' degrees outside and it feels like ' + data.feelslike + ' degrees with humidity of ' + data.humidity
               callback('empty' , str)
             }
   })
